@@ -46,7 +46,7 @@ class MessageBuilder:
                 embed.add_field(name="Body", value=item.item.selftext if item.item.selftext != "" else "Empty",
                                 inline=False)
             else:
-                embed.set_thumbnail(url=item.url)
+                embed.set_thumbnail(url=item.item.url)
             if item.source == "reports":
                 reports = ["{} {}".format(r[1], r[0]) for r in item.item.user_reports]
                 embed.add_field(name="Reports", value="\n".join(reports), inline=False)
