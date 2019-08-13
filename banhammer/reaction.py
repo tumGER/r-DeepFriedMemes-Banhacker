@@ -119,7 +119,10 @@ class Reaction:
         self.approve = kwargs["approve"] if "approve" in kwargs else False
         self.mark_nsfw = kwargs["mark_nsfw"] if "mark_nsfw" in kwargs else False
         self.lock = kwargs["lock"] if "lock" in kwargs else False
-        self.reply = kwargs["reply"] if "reply" in kwargs else ""
+        self.reply_message_start = "Thanks for posting to /r/DeepFriedMemes. Unfortunately your post has been removed for the following reason(s): \n \n"
+        self.reply_message_stop = "\n \n \n *If you feel that your post was removed in error or are unsure about why this post was removed then please contact us through [modmail](https://www.reddit.com/message/compose?to=%\2Fr%\2FDeepFriedMemes).* "\
+        "\n \n \n I\'m a bot created to make modding easier for everyone!"
+        self.reply = (self.reply_message_start + kwargs["reply"] + self.reply_message_stop) if "reply" in kwargs else ""
 
         self.distinguish_reply = kwargs["distinguish_reply"] if "distinguish_reply" in kwargs else True
         self.sticky_reply = kwargs["sticky_reply"] if "sticky_reply" in kwargs else True
