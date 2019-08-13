@@ -4,7 +4,7 @@ emoji: ✔
 approve: true
 # One
 --
-emoji: <one:610943617468596336>
+emoji: 🧓
 flair: rule 1
 lock: true
 distinguish_reply: true
@@ -12,28 +12,28 @@ sticky_reply: true
 ban: 7
 # Two
 --
-emoji: <one:610943617468596336>
+emoji: ⬆
 flair: rule2
 lock: true
 distinguish_reply: true
 sticky_reply: true
 # Three
 --
-emoji: <one:610943617468596336>
+emoji: 📄
 flair: rule3
 lock: true
 distinguish_reply: true
 sticky_reply: true
 # Four
 --
-emoji: <one:610943617468596336>
+emoji: 😴
 flair: rule4
 lock: true
 distinguish_reply: true
 sticky_reply: true
 # Five
 --
-emoji: <one:610943617468596336>
+emoji: 👳🏿‍♀️
 flair: rule5
 lock: true
 distinguish_reply: true
@@ -41,7 +41,7 @@ sticky_reply: true
 ban: 1
 # Six
 --
-emoji: <one:610943617468596336>
+emoji: 🤖
 flair: rule6
 lock: true
 distinguish_reply: true
@@ -49,21 +49,21 @@ sticky_reply: true
 ban: 3
 # Seven
 --
-emoji: <one:610943617468596336>
+emoji: 🔦
 flair: rule7
 lock: true
 distinguish_reply: true
 sticky_reply: true
 # Nine
 --
-emoji: <one:610943617468596336>
+emoji: 🅱
 flair: rule9
 lock: true
 distinguish_reply: true
 sticky_reply: true
 # Ten
 --
-emoji: <one:610943617468596336>
+emoji: 🤡
 flair: rule10
 lock: true
 distinguish_reply: true
