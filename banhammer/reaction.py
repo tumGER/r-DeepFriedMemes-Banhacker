@@ -58,9 +58,6 @@ class ReactionHandler:
             if reaction.mute:
                 item.item.conversation.mute()
                 payload.actions.append("muted")
-            if reaction.reply != "":
-                item.item.conversation.reply(reply_message_start + reason[reaction.flair] + reply_message_stop)
-                payload.actions.append("replied to")
             return payload
 
         is_submission = isinstance(item.item, praw.models.Submission)
@@ -97,10 +94,9 @@ class ReactionHandler:
                 item.item.mod.nsfw()
                 payload.actions.append("marked NSFW")
 
-        if reaction.reply != "":
-            reply = item.item.reply(reply_message_start + reason[reaction.flair] + reply_message_stop)
-            if reaction.distinguish_reply: reply.mod.distinguish(sticky=reaction.sticky_reply)
-            payload.actions.append("replied to")
+        reply = item.item.reply(reply_message_start + reason[reaction.flair] + reply_message_stop)
+        reply.mod.distinguish(sticky=reaction.sticky_reply)
+        payload.actions.append("replied to")
 
         if isinstance(reaction.ban, int):
             if reaction.ban == 0:
