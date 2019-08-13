@@ -16,7 +16,7 @@ class MessageBuilder:
                 item.item.conversation.subject, item.item.conversation.owner, item.item.author, item.item.body_markdown)
         else:
             return "New action taken by /u/{} on /r/{}: `{}`".format(item.item.mod, item.item.subreddit,
-                                                                     item.item.action
+                                                                     item.item.action)
 
     def get_item_embed(self, item, embed_color=None):
         embed = discord.Embed(
