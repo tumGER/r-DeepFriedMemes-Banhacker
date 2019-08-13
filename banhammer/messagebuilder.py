@@ -45,6 +45,8 @@ class MessageBuilder:
             if item.item.is_self:
                 embed.add_field(name="Body", value=item.item.selftext if item.item.selftext != "" else "Empty",
                                 inline=False)
+            elif url.endswith((".jpg",".png")):
+                embed.set_thumbnail(url=url)
             else:
                 embed.add_field(name="URL", value=item.item.url, inline=False)
             if item.source == "reports":
