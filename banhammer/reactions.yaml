@@ -4,7 +4,7 @@ emoji: ✔
 approve: true
 # One
 --
-emoji: 1️⃣
+emoji: <one:610943617468596336>
 flair: rule 1
 lock: true
 distinguish_reply: true
@@ -12,7 +12,7 @@ sticky_reply: true
 ban: 7
 # Two
 --
-emoji: 2️⃣
+emoji: two
 flair: rule2
 lock: true
 distinguish_reply: true
