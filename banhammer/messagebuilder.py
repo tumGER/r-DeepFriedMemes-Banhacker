@@ -1,4 +1,5 @@
 import discord
+import requests
 
 
 class MessageBuilder:
@@ -17,6 +18,12 @@ class MessageBuilder:
         else:
             return "New action taken by /u/{} on /r/{}: `{}`".format(item.item.mod, item.item.subreddit,
                                                                      item.item.action)
+    def is_url_image(self, image_url):
+        image_formats = ("image/png", "image/jpeg", "image/jpg")
+        r = requests.head(image_url)
+        if r.headers["content-type"] in image_formats:
+            return True
+        return False
 
     def get_item_embed(self, item, embed_color=None):
         embed = discord.Embed(
@@ -45,7 +52,7 @@ class MessageBuilder:
             if item.item.is_self:
                 embed.add_field(name="Body", value=item.item.selftext if item.item.selftext != "" else "Empty",
                                 inline=False)
-            elif url.endswith((".jpg",".png")):
+            elif self.get_item_message(url):
                 embed.set_thumbnail(url=url)
             else:
                 embed.add_field(name="URL", value=item.item.url, inline=False)
