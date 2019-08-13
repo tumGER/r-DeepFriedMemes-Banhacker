@@ -4,7 +4,7 @@ emoji: ✔
 approve: true
 # One
 --
-emoji: 🧓
+emoji: 🔁
 flair: rule 1
 lock: true
 distinguish_reply: true
@@ -33,7 +33,7 @@ distinguish_reply: true
 sticky_reply: true
 # Five
 --
-emoji: 👳🏿‍♀️
+emoji: 🔫
 flair: rule5
 lock: true
 distinguish_reply: true
