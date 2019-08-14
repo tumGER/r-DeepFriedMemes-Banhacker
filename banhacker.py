@@ -49,7 +49,10 @@ async def handle_new(p):
 
 @bh.mail()
 async def handle_mail(p):
-    msg = await bot.get_channel(bh_config["mail_channel"]).send(embed=p.get_embed())
+    try:
+        msg = await bot.get_channel(bh_config["mail_channel"]).send(embed=p.get_embed())
+    except:
+        print("Error Sending Mail")
     for react in p.get_reactions():
         try:
             await msg.add_reaction(react.emoji)

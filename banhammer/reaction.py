@@ -4,8 +4,8 @@ from . import exceptions
 from . import item as reddititem
 from . import yaml
 
-reply_message_start = "Thanks for posting to /r/DeepFriedMemes. Unfortunately your post has been removed for the following reason(s): "
-reply_message_stop = "*If you feel that your post was removed in error or are unsure about why this post was removed then please contact us through [modmail](https://www.reddit.com/message/compose?to=%\2Fr%\2FDeepFriedMemes).* "\
+reply_message_start = "Thanks for posting to /r/DeepFriedMemes. Unfortunately your post has been removed for the following reason(s): \n \n"
+reply_message_stop = "\n \n --- \n *If you feel that your post was removed in error or are unsure about why this post was removed then please contact us through [modmail](https://www.reddit.com/message/compose?to=%\2Fr%\2FDeepFriedMemes).* "\
 " I\'m a bot created to make modding easier for everyone!"
 reason = {
 "rule 1": "1) NO reposts. Offenders will be banned. Repeated offenders will be permabanned. If you intend on posting something, make sure that it has not already been posted here. We recommend that you don\'t ...",
